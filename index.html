@@ -1,168 +1,265 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>羽你同行</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>羽你同行 官网</title>
     <style>
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-       body {
-            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-            line-height: 1.8;
-            color: #444;
-            background: #f8f9fa;
-        }
+      body {
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        line-height: 1.8;
+        color: #444;
+        background: #f8f9fa;
+      }
 
-        .header {
-            background: linear-gradient(135deg, #89CFF0 0%, #B0E0E6 100%);
-            padding: 3rem 1rem;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+      .header {
+        background: linear-gradient(135deg, #89cff0 0%, #b0e0e6 100%);
+        padding: 3rem 1rem;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
 
-        .avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+      .avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
 
+      .content {
+        max-width: 760px;
+        margin: 2.5rem auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      }
+
+      .highlight {
+        background: #fff3f6;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #ffb6c1;
+        border-radius: 6px;
+        font-style: italic;
+        color: #d23669;
+      }
+
+      h1 {
+        color: #2c3e50;
+        font-size: 2.2rem;
+        margin: 2rem 0 1.5rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 2px solid #b0e0e6;
+      }
+
+      p {
+        margin: 1.2rem 0;
+        padding: 0.5rem;
+        transition: background 0.3s;
+      }
+
+      p:hover {
+        background: #f8f9ff;
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #b0e0e6 0%, #89cff0 100%);
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #2c3e50;
+      }
+
+      .footer a {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        background: white;
+        color: #2c3e50;
+        text-decoration: none;
+        border-radius: 20px;
+        margin-top: 1rem;
+        transition: transform 0.3s;
+      }
+
+      .footer a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
         .content {
-            max-width: 760px;
-            margin: 2.5rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+          margin: 1.5rem;
+          padding: 1.5rem;
         }
-
-        .highlight {
-            background: #FFF3F6;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-left: 4px solid #FFB6C1;
-            border-radius: 6px;
-            font-style: italic;
-            color: #D23669;
-        }
-
         h1 {
-            color: #2C3E50;
-            font-size: 2.2rem;
-            margin: 2rem 0 1.5rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 2px solid #B0E0E6;
+          font-size: 1.8rem;
         }
-
-        p {
-            margin: 1.2rem 0;
-            padding: 0.5rem;
-            transition: background 0.3s;
-        }
-
-        p:hover {
-            background: #F8F9FF;
-        }
-
-       .footer {
-            background: linear-gradient(135deg, #B0E0E6 0%, #89CFF0 100%);
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #2C3E50;
-        }
-
-        .footer a {
-            display: inline-block;
-            padding: 0.6rem 1.5rem;
-            background: white;
-            color: #2C3E50;
-            text-decoration: none;
-            border-radius: 20px;
-            margin-top: 1rem;
-            transition: transform 0.3s;
-        }
-
-        .footer a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                margin: 1.5rem;
-                padding: 1.5rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <img src="https://i.imgs.ovh/2025/03/23/yTmza.jpeg" alt="汪子彦" class="avatar">
+      <img
+        src="https://i.imgs.ovh/2025/03/23/yTmza.jpeg"
+        alt="汪子彦"
+        class="avatar"
+      />
     </header>
 
     <main class="content">
-        <p class="highlight">亲爱的莫妮卡：当你看到这封信的时候，我刚在白云湖边上吃了一碗石花粉，还吹了晚风听了Jay，我在这找到朋友了，就不回南区了</p>
+      <p class="highlight">
+        亲爱的莫妮卡：当你看到这封信的时候，我刚在白云湖边上吃了一碗石花粉，还吹了晚风听了Jay，我在这找到朋友了，就不回南区了
+      </p>
 
-        <h1>【新版群规】羽你同行</h1>
-        
-        <p>一、核心原则
-1. 本群以羽毛球运动交流、技术分享、线下组织活动为核心功能，禁止偏离主题的恶意刷屏、广告、传谣等行为。  
-2. 线上言论不得延伸至线下骚扰，禁止利用群内信息进行人身攻击、诽谤或隐私侵犯。</p>
-        <p>二、行为规范细则
-1. 禁止行为清单
- 发言类违规:刷屏（连续发送5条以上无关内容）、脏话、人身攻击；  
-广告（含未知网站链接、无关广告推广、等）；  
-虚构身份/关系（如小号伪装他人、编造不实传闻）；  
-攀比球拍/装备价格（允许技术讨论，禁止炫耀贬低）。  
-管理类违规：  
-管理员禁止滥用权限（如无证据踢人、因私仇禁言）；  
-群主转让需提前24小时公示（紧急情况需3名管理员联名同意）；  
-临时群主禁止超期后不归还权限。  
-安全类违规：  
-诱导点击风险链接（如未标注来源的网站、应用软件等）；  
-2. 新增约束条款  
-线上线下联动限制：  
-禁止利用群内言论进行线下传谣、骚扰或组织非法活动，违者直接踢群并上报班主任/校方。  
-玩笑尺度规范: 允许适度活跃气氛，但禁止涉及敏感话题（如恋爱关系、隐私病史、等）违者按“传谣”处理。</p>
-        <p>违规处罚：  
-普通违规（刷屏、脏话、等）：第1次警告（分为警告三次），第2次禁言，第3次踢群。踢群后，请向群主报备！  
-严重违规（传谣、人身攻击、等）：第1次禁言1，2，3，天不等，（按严重程度规范）+公开检讨，第2次踢群+永久拉黑。  
-管理员滥用权限（无证据踢人、因私仇禁言）：第1次警告+禁言3天，第2次撤职+禁言一周，第三次，踢群。  
-2. 申诉与监督 
-申诉流程：  
-1. 私聊任一管理员提交完整证据截图；  
-2. 3名管理员（含群主）48小时内投票裁决；  
-3. 申诉结果群内公示，接受全员监督。  
-管理透明化：  
-每月1日公示上月违规记录（隐去昵称）、 管理操作日志（踢人/禁言原因）</p>
-        <p>四、安全与风险防控
-安全提醒：  
-运动前必须完成「群热身三部曲」① 手腕绕环20次 ② 高抬腿30秒 ③ 弓步压腿各10次；  
-禁止约球时单独与陌生人线下见面（建议2人以上组队）</p>
-        <p>防骗条款：  
-涉及金钱交易（如AA费用、装备团购）私聊转账风险，后果自负！与本群无关！  
-发现疑似诈骗行为，请及时举报！上报群管理或群主。</p>
-        <p>五、附则  
-1. 本群规修订需半数以上活跃成员投票通过；  
-2. 新成员入群需阅读并回复“同意群管理群规+真实姓名+入群目的”，否则24小时内移出；  
-3. 连续2个月不发言且未参与活动者，按“不活跃成员”清理。</p>
-        <p>（注：本群规一旦发布立刻生效，最终解释权归群管理团队所有）</p>
+      <h1>【新版群规】羽你同行</h1>
+
+      <p>
+        一、核心原则 1.
+        本群以羽毛球运动交流、技术分享、线下组织活动为核心功能，禁止偏离主题的恶意刷屏、广告、传谣等行为。
+        2.
+        线上言论不得延伸至线下骚扰，禁止利用群内信息进行人身攻击、诽谤或隐私侵犯。
+      </p>
+      <p>
+        二、行为规范细则 1. 禁止行为清单
+        发言类违规:刷屏（连续发送5条以上无关内容）、脏话、人身攻击；
+        广告（含未知网站链接、无关广告推广、等）；
+        虚构身份/关系（如小号伪装他人、编造不实传闻）；
+        攀比球拍/装备价格（允许技术讨论，禁止炫耀贬低）。 管理类违规：
+        管理员禁止滥用权限（如无证据踢人、因私仇禁言）；
+        群主转让需提前24小时公示（紧急情况需3名管理员联名同意）；
+        临时群主禁止超期后不归还权限。 安全类违规：
+        诱导点击风险链接（如未标注来源的网站、应用软件等）； 2. 新增约束条款
+        线上线下联动限制：
+        禁止利用群内言论进行线下传谣、骚扰或组织非法活动，违者直接踢群并上报班主任/校方。
+        玩笑尺度规范:
+        允许适度活跃气氛，但禁止涉及敏感话题（如恋爱关系、隐私病史、等）违者按“传谣”处理。
+      </p>
+      <p>
+        违规处罚：
+        普通违规（刷屏、脏话、等）：第1次警告（分为警告三次），第2次禁言，第3次踢群。踢群后，请向群主报备！
+        严重违规（传谣、人身攻击、等）：第1次禁言1，2，3，天不等，（按严重程度规范）+公开检讨，第2次踢群+永久拉黑。
+        管理员滥用权限（无证据踢人、因私仇禁言）：第1次警告+禁言3天，第2次撤职+禁言一周，第三次，踢群。
+        2. 申诉与监督 申诉流程： 1. 私聊任一管理员提交完整证据截图； 2.
+        3名管理员（含群主）48小时内投票裁决； 3.
+        申诉结果群内公示，接受全员监督。 管理透明化：
+        每月1日公示上月违规记录（隐去昵称）、 管理操作日志（踢人/禁言原因）
+      </p>
+      <p>
+        四、安全与风险防控 安全提醒： 运动前必须完成「群热身三部曲」①
+        手腕绕环20次 ② 高抬腿30秒 ③ 弓步压腿各10次；
+        禁止约球时单独与陌生人线下见面（建议2人以上组队）
+      </p>
+      <p>
+        防骗条款：
+        涉及金钱交易（如AA费用、装备团购）私聊转账风险，后果自负！与本群无关！
+        发现疑似诈骗行为，请及时举报！上报群管理或群主。
+      </p>
+      <p>
+        五、附则 1. 本群规修订需半数以上活跃成员投票通过； 2.
+        新成员入群需阅读并回复“同意群管理群规+真实姓名+入群目的”，否则24小时内移出；
+        3. 连续2个月不发言且未参与活动者，按“不活跃成员”清理。
+      </p>
+      <p>（注：本群规一旦发布立刻生效，最终解释权归群管理团队所有）</p>
     </main>
 
     <footer class="footer">
-        <p>羽你同行 官网</p>
-        <p>加入我们  QQ：1042499042</p>
-        <a href="https://www.yonex.cn/">装备品牌</a>
+      <p>羽你同行 官网</p>
+      <p>版权所有：羽毛球群管理委员会</p>
+
+      <style>
+        .official-footer {
+          font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+          background-color: #f8f8f8;
+          padding: 20px 0;
+          border-top: 1px solid #e6e6e6;
+          font-size: 14px;
+          color: #666;
+          line-height: 1.8;
+        }
+        .footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+          text-align: center;
+        }
+        .official-footer p {
+          margin: 5px 0;
+        }
+        @media (max-width: 768px) {
+          .official-footer {
+            font-size: 12px;
+            padding: 15px 10px;
+          }
+        }
+      </style>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      />
+      <a
+        href="https://qm.qq.com/q/XStiu0rNug"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 20px;
+          background: linear-gradient(135deg, #12b7f5, #0084ff);
+          color: white;
+          text-decoration: none;
+          border-radius: 50px;
+          font-family: 'PingFang SC', sans-serif;
+          font-weight: 500;
+          box-shadow: 0 3px 10px rgba(18, 183, 245, 0.3);
+          transition: transform 0.2;
+        "
+        onmouseover="this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.transform='none'"
+      >
+        <i class="fab fa-qq" style="margin-right: 8px"></i>
+        加入我们 QQ群聊
+      </a>
+      <a
+        href="https://www.yonex.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="
+          display: inline-flex;
+          align-items: center;
+          padding: 10px 20px;
+          background: linear-gradient(
+            135deg,
+            #4facfe 0%,
+            #00f2fe 50%,
+            #f6d365 100%
+          );
+          color: white;
+          text-decoration: none;
+          border-radius: 50px;
+          font-family: 'PingFang SC', sans-serif;
+          font-weight: 500;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+          transition: transform 0.2, box-shadow 0.2;
+          margin-left: 10px;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        "
+        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0, 0, 0, 0.2)'"
+        onmouseout="this.style.transform='none'; this.style.boxShadow='0 3px 10px rgba(0, 0, 0, 0.15)'"
+      >
+        <i
+          class="fas fa-store-alt"
+          style="margin-right: 8px; color: #fff; font-size: 1.1em"
+        ></i>
+        装备商店
+      </a>
     </footer>
-</body>
+  </body>
 </html>
